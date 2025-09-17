@@ -6,7 +6,7 @@ return fetch(api_url)
     .then(response => response.json())
 };
 
-const characters =getCharacters(.then(characters => {
+const characters =getCharacters().then(characters => {
     const charactersList = document.getElementById('characters');
     charactersList.innerHTML = '';
     characters.forEach(character => {
@@ -14,4 +14,4 @@ const characters =getCharacters(.then(characters => {
         characterElement.textContent = character.name;
         charactersList.appendChild(characterElement);
     });
-}));
+});
