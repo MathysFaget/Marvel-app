@@ -1,15 +1,63 @@
 body {
-    font-family: sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background: #f6f8fa;
+    min-height: 100vh;
 }
 
+/* Header principal */
 h1 {
     margin: 0;
-    padding: 20px;
-    background: #333;
-    color: #fff;
+    padding: 32px 0 24px 0;
+    background: #444; /* fond gris foncé */
+    color: #fff;      /* texte blanc */
     text-align: center;
+    letter-spacing: 2px;
+    font-size: 2.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* Autres titres */
+h2, h3, h4, h5, h6 {
+    background: none;
+    color: #222;
+    margin-top: 32px;
+    margin-bottom: 16px;
+    text-align: left;
+}
+
+/* Liens sur bande grise */
+.navbar {
+    background: #888; /* gris moyen */
+    padding: 0;
+    margin: 0 0 32px 0;
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 16px 24px;
+    display: inline-block;
+    transition: color 0.2s, background 0.2s;
+}
+
+.navbar a:hover {
+    color: orange;
+    background: #666;
+}
+
+/* Reste du style inchangé */
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    padding: 32px 24px;
 }
 
 ul {
@@ -19,27 +67,57 @@ ul {
 }
 
 li {
-    padding: 10px;
-    border-bottom: 1px solid #000000;
+    padding: 12px 0;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 1.1rem;
 }
 
-/* Ajout du style pour centrer et aligner le tableau */
+li:last-child {
+    border-bottom: none;
+}
+
 table {
     margin: 40px auto;
     border-collapse: collapse;
-    min-width: 300px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    min-width: 350px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
     background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 th, td {
-    padding: 12px 24px;
+    padding: 14px 28px;
     text-align: center;
-    border: 1px solid #ddd;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 1.05rem;
 }
 
 th {
-    background: #333;
+    background: #232526;
     color: #fff;
-    font-weight: bold;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #414345;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #333;
+    margin: 16px 0;
+}
+
+/* Liens hors navbar (optionnel, si tu veux qu'ils restent bleus ailleurs) */
+a {
+    color: #1976d2;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: #0d47a1;
 }
