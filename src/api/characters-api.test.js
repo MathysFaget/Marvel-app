@@ -9,6 +9,7 @@ import characters from '../data/characters.json';
 jest.mock('../data/characters.json', () => [
     { id: 1, name: 'Character One' },
     { id: 2, name: 'Character Two' },
+    { id: 3},
 ]);
 
 // Test suite for characters-api.js
@@ -30,6 +31,11 @@ describe('characters-api', () => {
         test('should return the correct character when a valid ID is provided', () => {
             const result = getCharacterById(1);
             expect(result).toEqual({ id: 1, name: 'Character One' });
+        });
+
+        test('should return undefined when an invalid ID is provided', () => {
+            const result = getCharacterById(999);
+            expect(result).toBeUndefined();
         });
     });
 });
